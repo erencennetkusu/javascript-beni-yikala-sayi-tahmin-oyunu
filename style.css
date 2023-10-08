@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    
+}
+
+.container{
+
+    width: 60%;
+    height: 300px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.563);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.row{
+
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box{
+
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 0px 10px;
+    background-color: purple;
+    border-width: 0.4rem;
+    border-color:darkorange;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+
+.active{
+
+    transform: rotateX(360deg);
+}
+
+.box:hover{
+
+    box-shadow: 5px 5px 20px 5px purple;
+    transform: rotateY(30deg);
+}
+.fa-question{ 
+    animation: questionAnim 5s linear infinite;
+    transition: all 0.5s;
+}
+@keyframes questionAnim{
+    0%{
+        transform: rotateX(90deg);
+    }
+    50%{
+        transform: rotateX(180deg);
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+}
+
+.error-warning{
+
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-weight: bold;
+}
+
